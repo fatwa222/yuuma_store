@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yuuma Joki adalah layanan jasa joki Genshin Impact terpercaya dengan proses manual, aman, dan cepat." />
+  <title>Yuuma | Joki Genshin Impact</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div id="page-loader" class="page-loader" aria-live="polite">
+    <div class="loader-core">
+      <div class="loader-badge">Y</div>
+      <div class="loader-text">Yuuma</div>
+      <div class="loader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <canvas id="particle-canvas"></canvas>
+
+  <div class="app-shell">
+    <header class="topbar glass-card">
+      <a href="index.html" class="brand" aria-label="Yuuma Home">
+        <span class="brand-mark">Y</span>
+        <span class="brand-text">Yuuma <small>Store</small></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <a href="index.html" class="active">Beranda</a>
+        <a href="pages/about/index.html">Tentang</a>
+        <a href="pages/pricelist/index.html">Pricelist</a>
+        <a href="pages/contact/index.html">Kontak</a>
+      </nav>
+
+      <a href="https://wa.me/6289674135489" target="_blank" rel="noreferrer" class="btn btn-primary">
+        <i data-lucide="message-square"></i>
+        Chat Admin
+      </a>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow glass-card gsap-hero">
+              <i data-lucide="shield-check"></i>
+              Manual, aman, dan bebas tools ilegal
+            </div>
+
+            <h1 class="gsap-hero">
+              Tingkatkan akunmu ke <span class="gold-text">Teyvat</span> tanpa ribet.
+            </h1>
+
+            <p class="subtitle gsap-hero">
+              Yuuma hadir untuk membantu progress Genshin Impact kamu dengan proses yang aman,
+              cepat, dan transparan. Semua pengerjaan dilakukan secara manual dengan perhatian
+              terhadap keamanan akun dan privasi kamu.
+            </p>
+
+            <div class="hero-actions gsap-hero">
+              <a href="pages/pricelist/index.html" class="btn btn-primary">
+                <i data-lucide="sparkles"></i>
+                Lihat Paket
+              </a>
+              <a href="pages/contact/index.html" class="btn btn-secondary">
+                <i data-lucide="message-circle"></i>
+                Konsultasi WA
+              </a>
+            </div>
+
+            <div class="stats-grid gsap-hero">
+              <div class="stat-card glass-card">
+                <strong>100%</strong>
+                <span>Manual</span>
+              </div>
+              <div class="stat-card glass-card">
+                <strong>0%</strong>
+                <span>Tools Ilegal</span>
+              </div>
+              <div class="stat-card glass-card">
+                <strong>24/7</strong>
+                <span>Fast Response</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-panel glass-card gsap-hero">
+            <div class="panel-icon">
+              <i data-lucide="award" size="52"></i>
+            </div>
+            <h3>Jaminan Keamanan</h3>
+            <p>
+              Setiap order dikerjakan dengan rapi, aman, dan sesuai kebutuhan akunmu.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section" id="special-price">
+        <div class="section-header">
+          <p class="section-kicker">Paket Spesial</p>
+          <h2>Region <span class="gold-text">Paling laris</span></h2>
+        </div>
+
+        <div class="card-grid four-col">
+          <article class="service-card glass-card gsap-card">
+            <div class="card-icon"><i data-lucide="snowflake"></i></div>
+            <h3>Snezhnaya 7.0</h3>
+            <p>Archon Quest + World Quest + Explore 100% + Patung The Seven MAX</p>
+            <div class="price-line">
+              <span>Harga Paket</span>
+              <strong>Rp 149.000</strong>
+            </div>
+            <a href="https://wa.me/6289674135489?text=Halo%20admin,%20mau%20order%20Paket%20Special%20Snezhnaya%207.0" target="_blank" rel="noreferrer" class="btn btn-primary full-width">Pesan Paket</a>
+          </article>
+
+          <article class="service-card glass-card gsap-card">
+            <div class="card-icon"><i data-lucide="moon"></i></div>
+            <h3>ALL Nodkrai</h3>
+            <p>Area bulan + Archon Quest + World Quest + Explore 100% + Patung The Seven MAX</p>
+            <div class="price-line">
+              <span>Harga Paket</span>
+              <strong>Rp 239.000</strong>
+            </div>
+            <a href="https://wa.me/6289674135489?text=Halo%20admin,%20mau%20order%20Paket%20Special%20ALL%20Nodkrai" target="_blank" rel="noreferrer" class="btn btn-primary full-width">Pesan Paket</a>
+          </article>
+
+          <article class="service-card glass-card gsap-card">
+            <div class="card-icon"><i data-lucide="flame"></i></div>
+            <h3>ALL Natlan</h3>
+            <p>Full area Natlan + Archon Quest + World Quest + Explore 100% + Patung The Seven MAX</p>
+            <div class="price-line">
+              <span>Harga Paket</span>
+              <strong>Rp 489.000</strong>
+            </div>
+            <a href="https://wa.me/6289674135489?text=Halo%20admin,%20mau%20order%20Paket%20Special%20ALL%20Natlan" target="_blank" rel="noreferrer" class="btn btn-primary full-width">Pesan Paket</a>
+          </article>
+
+          <article class="service-card glass-card gsap-card">
+            <div class="card-icon"><i data-lucide="droplets"></i></div>
+            <h3>ALL Fontaine</h3>
+            <p>Full area Fontaine + Archon Quest + World Quest + Explore 100% + Patung The Seven MAX</p>
+            <div class="price-line">
+              <span>Harga Paket</span>
+              <strong>Rp 519.000</strong>
+            </div>
+            <a href="https://wa.me/6289674135489?text=Halo%20admin,%20mau%20order%20Paket%20Special%20ALL%20Fontaine" target="_blank" rel="noreferrer" class="btn btn-primary full-width">Pesan Paket</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="container section">
+        <div class="section-header">
+          <p class="section-kicker">Kenapa pilih Yuuma?</p>
+          <h2>Proses yang <span class="gold-text">terarah</span> dan aman</h2>
+        </div>
+
+        <div class="card-grid three-col">
+          <div class="feature-card glass-card gsap-card">
+            <div class="feature-icon"><i data-lucide="badge-check"></i></div>
+            <h3>Proses Manual</h3>
+            <p>Semua pengerjaan dilakukan tanpa tools ilegal dan fokus pada hasil yang rapi.</p>
+          </div>
+
+          <div class="feature-card glass-card gsap-card">
+            <div class="feature-icon"><i data-lucide="clock-3"></i></div>
+            <h3>Respon Cepat</h3>
+            <p>Tim selalu siap membantu kebutuhan order dan pertanyaan kamu dengan cepat.</p>
+          </div>
+
+          <div class="feature-card glass-card gsap-card">
+            <div class="feature-icon"><i data-lucide="lock"></i></div>
+            <h3>Privasi Aman</h3>
+            <p>Data akun dan progress ditangani dengan aman serta menjaga kerahasiaan.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Yuuma Joki. Made with Love for Genshin Impact players.</p>
+    </footer>
+  </div>
+
+  <script src="assets/js/main.js?v=20260915"></script>
+</body>
+</html>

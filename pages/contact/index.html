@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontak Yuuma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+<body>
+  <div id="page-loader" class="page-loader" aria-live="polite">
+    <div class="loader-core">
+      <div class="loader-badge">Y</div>
+      <div class="loader-text">Yuuma</div>
+      <div class="loader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <canvas id="particle-canvas"></canvas>
+
+  <div class="app-shell">
+    <header class="topbar glass-card">
+      <a href="../../index.html" class="brand" aria-label="Yuuma Home">
+        <span class="brand-mark">Y</span>
+        <span class="brand-text">Yuuma <small>Store</small></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <a href="../../index.html">Beranda</a>
+        <a href="../about/index.html">Tentang</a>
+        <a href="../pricelist/index.html">Pricelist</a>
+        <a href="index.html" class="active">Kontak</a>
+      </nav>
+
+      <a href="https://wa.me/6289674135489" target="_blank" rel="noreferrer" class="btn btn-primary">
+        <i data-lucide="message-square"></i>
+        Chat Admin
+      </a>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-hero">
+        <p class="section-kicker">Kontak</p>
+        <h1>Hubungi <span class="gold-text">Yuuma</span></h1>
+        <p>Sudah tahu layanan yang kamu butuhkan atau masih mau konsultasi? Kirim detailnya, admin Yuuma siap bantu cek dan hitungkan estimasinya.</p>
+      </section>
+
+      <section class="contact-grid">
+        <article class="contact-card glass-card">
+          <div>
+            <p class="section-kicker">Fast response</p>
+            <h3 class="gold-text">Mulai dari WhatsApp</h3>
+            <p class="contact-lead">Untuk cek harga, slot pengerjaan, dan konsultasi akun, WhatsApp adalah kanal tercepat.</p>
+          </div>
+          <a href="https://wa.me/6289674135489?text=Halo%20admin%20Yuuma,%20saya%20mau%20konsultasi%20joki" target="_blank" rel="noreferrer" class="contact-channel whatsapp-channel">
+            <span class="channel-icon"><i data-lucide="message-circle"></i></span>
+            <span><strong>WhatsApp Admin</strong><small>089674135489</small></span>
+            <i data-lucide="arrow-up-right" class="channel-arrow"></i>
+          </a>
+          <div class="contact-list">
+            <div class="contact-item"><i data-lucide="video"></i><span><strong>TikTok</strong><small>@lmine_1</small></span></div>
+            <div class="contact-item"><i data-lucide="wallet"></i><span><strong>Pembayaran</strong><small>GoPay dan DANA</small></span></div>
+          </div>
+        </article>
+
+        <article class="contact-card glass-card">
+          <p class="section-kicker">Quick order</p>
+          <h3 class="gold-text">Kirim detail order</h3>
+          <form class="contact-form" onsubmit="event.preventDefault(); window.open('https://wa.me/6289674135489?text=' + encodeURIComponent(document.getElementById('message').value || 'Halo admin, saya mau tanya joki Yuuma'), '_blank');">
+            <label for="message">Pesan untuk admin</label>
+            <textarea id="message" placeholder="Contoh: mau ascend Furina dari level 80 ke 90...">Halo admin, saya mau tanya joki Yuuma.
+
+Layanan yang saya butuhkan:
+Detail akun / target:</textarea>
+            <p class="contact-form-note">Pesan akan dibuka langsung di WhatsApp kamu.</p>
+            <button type="submit" class="btn btn-primary"><i data-lucide="send"></i>Kirim ke WhatsApp</button>
+          </form>
+        </article>
+      </section>
+
+      <section class="contact-steps glass-card">
+        <div class="section-header">
+          <p class="section-kicker">Cara order</p>
+          <h2>Simple, <span class="gold-text">jelas</span>, dan aman</h2>
+        </div>
+        <div class="steps-grid">
+          <div class="step-item"><span>01</span><div><h3>Kirim kebutuhan</h3><p>Sebutkan layanan, karakter atau quest, serta target levelnya.</p></div></div>
+          <div class="step-item"><span>02</span><div><h3>Dapat estimasi</h3><p>Admin mengecek detail akun dan mengonfirmasi harga serta slot.</p></div></div>
+          <div class="step-item"><span>03</span><div><h3>Mulai pengerjaan</h3><p>Order diproses setelah detail dan metode pembayaran disepakati.</p></div></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Yuuma Joki. Made with Love for Genshin Impact players.</p>
+    </footer>
+  </div>
+
+  <script src="../../assets/js/main.js?v=20260915"></script>
+</body>
+</html>
