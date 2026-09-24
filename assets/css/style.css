@@ -702,6 +702,11 @@ textarea {
   padding: 12px 14px;
 }
 
+.quick-order-form input:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
 .quick-order-form select {
   grid-column: 1 / 2;
 }

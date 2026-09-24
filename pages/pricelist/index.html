@@ -60,10 +60,10 @@
             <span class="list-count">04 paket</span>
           </div>
           <div class="price-list">
-            <div class="price-row"><span>Snezhnaya 7.0</span><strong>Rp 149.000</strong></div>
-            <div class="price-row"><span>ALL Nodkrai</span><strong>Rp 239.000</strong></div>
+            <div class="price-row"><span>ALL Fontaine</span><strong>Rp 519.000</strong></div> 
             <div class="price-row"><span>ALL Natlan</span><strong>Rp 489.000</strong></div>
-            <div class="price-row"><span>ALL Fontaine</span><strong>Rp 519.000</strong></div>
+            <div class="price-row"><span>ALL Nodkrai</span><strong>Rp 239.000</strong></div>
+            <div class="price-row"><span>Snezhnaya 7.0</span><strong>Rp 149.000</strong></div>
             <p class="price-note">Paket ini mencakup Archon Quest, World Quest, Explore 100%, dan Patung The Seven MAX.</p>
             <p class="price-note">KHUSUS UNTUK YANG BELUM NYENTUH SAMA SEKALI MAP TERSEBUT, TERUTAMA MASIH GELAP. KALO SUDAH TER EXPLORE 20%-50% AKAN ADA PERBEDAAN HARGA.</p>
           </div>
@@ -103,16 +103,13 @@
           </div>
           <div class="price-list">
             <div class="price-group">
-              <div class="price-row"><span>Level 20 - 40</span><strong>Rp 1.000</strong></div>
-              <div class="price-row"><span>Level 40 - 50</span><strong>Rp 3.000</strong></div>
-              <div class="price-row"><span>Level 50 - 60</span><strong>Rp 7.000</strong></div>
-              <div class="price-row"><span>Level 60 - 70</span><strong>Rp 10.000</strong></div>
-              <div class="price-row"><span>Level 70 - 80</span><strong>Rp 13.000</strong></div>
+              <div class="price-row"><span>Level 1 - 90 </span><strong>Rp 20.000</strong></div>
               <div class="price-row"><span>Level 80 - 90</span><strong>Rp 15.000</strong></div>
-            </div>
-            <div class="price-group price-group-full">
-              <p class="price-group-title">Full Level</p>
-              <div class="price-row"><span>Level 1 - 90 <small>Character / Weapon</small></span><strong>Rp 20.000</strong></div>
+              <div class="price-row"><span>Level 70 - 80</span><strong>Rp 13.000</strong></div>
+              <div class="price-row"><span>Level 60 - 70</span><strong>Rp 10.000</strong></div>
+              <div class="price-row"><span>Level 50 - 60</span><strong>Rp 7.000</strong></div>
+              <div class="price-row"><span>Level 40 - 50</span><strong>Rp 3.000</strong></div>
+              <div class="price-row"><span>Level 20 - 40</span><strong>Rp 1.000</strong></div>
             </div>
           </div>
           <p class="price-note">Bisa untuk character maupun weapon. Pilih tier sesuai target level akun.</p>
@@ -129,17 +126,21 @@
         <form id="quick-order-form" class="quick-order-form">
           <label for="order-service">Layanan</label>
           <select id="order-service" name="service">
-            <option value="IF" data-service="IF">Intertwined Fate (IF)</option>
-            <option value="Level 1 - 90" data-service="Level 1 - 90">Level 1 - 90</option>
-            <option value="Ascend 20 - 40" data-service="Ascend level 20 - 40">Ascend level 20 - 40</option>
-            <option value="Ascend 40 - 50" data-service="Ascend level 40 - 50">Ascend level 40 - 50</option>
-            <option value="Ascend 50 - 60" data-service="Ascend level 50 - 60">Ascend level 50 - 60</option>
-            <option value="Ascend 60 - 70" data-service="Ascend level 60 - 70">Ascend level 60 - 70</option>
-            <option value="Ascend 70 - 80" data-service="Ascend level 70 - 80">Ascend level 70 - 80</option>
-            <option value="Ascend 80 - 90" data-service="Ascend level 80 - 90">Ascend level 80 - 90</option>
-            <option value="Archon Quest" data-service="Archon Quest">Archon Quest</option>
-            <option value="Story Quest" data-service="Story Quest">Story Quest</option>
-            <option value="Spam Arte" data-service="Spam Arte">Spam Arte</option>
+            <option value="ALL Fontaine" data-service="ALL Fontaine" data-quantity="false">ALL Fontaine</option>
+            <option value="ALL Natlan" data-service="ALL Natlan" data-quantity="false">ALL Natlan</option>
+            <option value="ALL Nodkrai" data-service="ALL Nodkrai" data-quantity="false">ALL Nodkrai</option>
+            <option value="Snezhnaya 7.0" data-service="Snezhnaya 7.0" data-quantity="false">Snezhnaya 7.0</option>
+            <option value="IF" data-service="IF" data-quantity="true">Intertwined Fate (IF)</option>
+            <option value="Ascend level 1 - 90" data-service="Ascend level 1 - 90" data-quantity="false">Ascend level 1 - 90</option>
+            <option value="Ascend level 20 - 40" data-service="Ascend level 20 - 40" data-quantity="false">Ascend level 20 - 40</option>
+            <option value="Ascend level 40 - 50" data-service="Ascend level 40 - 50" data-quantity="false">Ascend level 40 - 50</option>
+            <option value="Ascend level 50 - 60" data-service="Ascend level 50 - 60" data-quantity="false">Ascend level 50 - 60</option>
+            <option value="Ascend level 60 - 70" data-service="Ascend level 60 - 70" data-quantity="false">Ascend level 60 - 70</option>
+            <option value="Ascend level 70 - 80" data-service="Ascend level 70 - 80" data-quantity="false">Ascend level 70 - 80</option>
+            <option value="Ascend level 80 - 90" data-service="Ascend level 80 - 90" data-quantity="false">Ascend level 80 - 90</option>
+            <option value="Archon Quest" data-service="Archon Quest" data-quantity="true">Archon Quest</option>
+            <option value="Story Quest" data-service="Story Quest" data-quantity="true">Story Quest</option>
+            <option value="Spam Arte" data-service="Spam Arte" data-quantity="true">Spam Arte</option>
           </select>
 
           <label for="order-quantity">Jumlah</label>

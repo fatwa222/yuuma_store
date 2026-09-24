@@ -7,17 +7,48 @@ const orderService = document.getElementById('order-service');
 const orderQuantity = document.getElementById('order-quantity');
 const orderUnit = document.getElementById('order-unit');
 const orderPreview = document.getElementById('order-preview');
+const orderQuantityLabel = document.querySelector('label[for="order-quantity"]');
+const orderQuantityField = document.querySelector('.quantity-field');
 
-if (quickOrderForm && orderService && orderQuantity && orderUnit && orderPreview) {
+if (quickOrderForm && orderService && orderQuantity && orderUnit && orderPreview && orderQuantityLabel && orderQuantityField) {
+  let lastQuantity = 1;
+
   const updateOrderPreview = () => {
     const selectedOption = orderService.options[orderService.selectedIndex];
     const service = selectedOption.dataset.service || selectedOption.value;
-    const quantity = Math.max(1, Number(orderQuantity.value) || 1);
-    const unit = orderService.value === 'IF' ? 'IF' : 'x';
+    const allowQuantity = selectedOption.dataset.quantity === 'true';
+    const unit = service === 'IF' ? 'IF' : 'x';
 
-    orderQuantity.value = quantity;
+    orderQuantity.disabled = !allowQuantity;
+    orderQuantityLabel.style.display = allowQuantity ? '' : 'none';
+    orderQuantityField.style.display = allowQuantity ? '' : 'none';
+
+    if (!allowQuantity) {
+      orderQuantity.value = '';
+      orderUnit.textContent = '';
+      orderPreview.textContent = `Yuuma, aku mau joki ${service} dong`;
+      return;
+    }
+
+    const rawValue = orderQuantity.value;
+    if (rawValue === '') {
+      orderUnit.textContent = unit;
+      orderPreview.textContent = `Yuuma, aku mau joki ${lastQuantity} ${service} dong`;
+      return;
+    }
+
+    const parsedValue = Number(rawValue);
+    if (!Number.isFinite(parsedValue) || parsedValue < 1) {
+      orderQuantity.value = String(lastQuantity);
+      orderUnit.textContent = unit;
+      orderPreview.textContent = `Yuuma, aku mau joki ${lastQuantity} ${service} dong`;
+      return;
+    }
+
+    lastQuantity = parsedValue;
+    orderQuantity.value = String(parsedValue);
     orderUnit.textContent = unit;
-    orderPreview.textContent = `Yuuma, aku mau joki ${quantity} ${service} dong`;
+    orderPreview.textContent = `Yuuma, aku mau joki ${parsedValue} ${service} dong`;
   };
 
   orderService.addEventListener('change', updateOrderPreview);
